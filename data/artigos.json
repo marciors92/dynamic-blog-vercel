@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Primeiro Artigo do Blog",
+    "autor": "Micaela Silva",
+    "dataPublicacao": "27-10-2023",
+    "resumo": "Este artigo explora como usar o App Router e Server Components, demonstrando sua otimização para SEO e performance. Essencial para quem está começando!",
+    "conteudo": "Este é o conteúdo completo do primeiro artigo. Ele aborda conceitos básicos do App Router e Server Components, demonstrando como eles funcionam de forma otimizada para SEO e a importância de uma arquitetura de dados eficiente. A Next.js 14 trouxe melhorias significativas no `data fetching` e na forma como as rotas são gerenciadas, tornando o desenvolvimento de aplicações robustas mais simples e direto. Exploramos aqui como a renderização no servidor (SSR) e a geração de sites estáticos (SSG) podem ser aplicadas para criar um blog de alta performance. Além disso, detalhamos as boas práticas para estruturar as rotas de forma a facilitar a escalabilidade do projeto."
+  },
+  {
+    "id": 2,
+    "titulo": "SEO Dinâmico com Next.js 14",
+    "autor": "Estêvão Rocha",
+    "dataPublicacao": "28-10-2023",
+    "resumo": "Descubra como a função `generateMetadata` permite criar metadados de forma dinâmica para cada página, melhorando a indexação nos motores de busca.",
+    "conteudo": "Aqui exploramos em profundidade como a função `generateMetadata` permite criar títulos, descrições e metadados Open Graph dinâmicos para cada página de artigo. Isso é crucial para o **SEO on-page**, garantindo que cada URL tenha um conteúdo de metadados único e relevante para os motores de busca como Google e Bing. Também discutimos a importância dos dados estruturados (JSON-LD) para enriquecer os resultados de pesquisa, e como o App Router facilita a implementação dessas práticas. Mostramos exemplos práticos de como definir `title`, `description` e até mesmo `og:image` de forma programática, tornando a gestão de conteúdo SEO-friendly mais eficiente."
+  },
+  {
+    "id": 3,
+    "titulo": "Carregamento de Dados e SSG",
+    "autor": "Cristóvão Souza",
+    "dataPublicacao": "29-10-2023",
+    "resumo": "Este artigo mostra como utilizar `generateStaticParams` para gerar páginas estáticas para todos os artigos no momento do build, garantindo alta performance.",
+    "conteudo": "Neste artigo, aprofundamos o conceito de SSG (Static Site Generation) com o Next.js App Router. Detalhamos como a função `generateStaticParams` é a chave para pré-renderizar páginas de rotas dinâmicas no momento do build. Essa abordagem garante que o HTML já está pronto antes de qualquer requisição do usuário, resultando em um carregamento de página quase instantâneo e uma experiência de usuário superior. Explicamos o fluxo de trabalho: como os dados são buscados no build, como as páginas são geradas e como elas são servidas globalmente a partir de uma CDN, o que é ideal para blogs e sites com conteúdo que não muda com frequência. Com isso, seu blog se torna não apenas rápido, mas também mais seguro e escalável."
+  }
+]
