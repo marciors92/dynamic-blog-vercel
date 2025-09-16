@@ -2,7 +2,7 @@
 import './globals.css';
 import Link from 'next/link';
 
-// Metadados estáticos para todo o site. Aparecem em todas as páginas.
+// Metadados estáticos para todo o site.
 export const metadata = {
   title: 'Blog Next.js',
   description: 'Um blog simples e robusto construído com o Next.js App Router.'
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR">
       <body>
-        {/* Componente de cabeçalho. Fica visível em todas as páginas. */}
+        {/* Componente de cabeçalho. */}
         <header className="bg-gray-800 text-white p-4">
           <nav className="container mx-auto flex justify-between items-center">
             {/* Link que leva para a página inicial */}
@@ -23,10 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
 
-        {/* 'children' é a página atual que está sendo renderizada (a página inicial ou a página de artigo) */}
+        {/* 'children' é a página atual que está sendo renderizada */}
         <main className="min-h-screen bg-gray-100 py-8">{children}</main>
 
-        {/* Componente de rodapé. Fica visível em todas as páginas. */}
+        {/* Componente de rodapé. */}
         <footer className="bg-gray-800 text-white text-center p-4">
           <p>&copy; {new Date().getFullYear()} Blog App Router. Todos os direitos reservados.</p>
         </footer>

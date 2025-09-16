@@ -1,7 +1,7 @@
 // Importa componentes e bibliotecas necessárias
 import Link from 'next/link';
 import slugify from 'slugify';
-import artigos from '@/data/artigos.json'; // Importa os dados do JSON local
+import artigos from '@/data/artigos.json'; // O alias `@/` funciona com a configuração do tsconfig.json
 
 // Componente de página inicial. É um Server Component por padrão.
 export default async function PaginaInicial() {
