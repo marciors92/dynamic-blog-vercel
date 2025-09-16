@@ -1,26 +1,25 @@
-// Importa os dados, utilitários e componentes necessários
+// Importa os dados e utilitários
 import artigos from '@/data/artigos.json';
 import slugify from 'slugify';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 // Função para gerar os parâmetros de rotas estáticas.
-// O Next.js a executa no momento do build (SSG).
+// O Next.js a executa no momento do build (SSG) para pré-renderizar todas as páginas de artigo.
 export async function generateStaticParams() {
   const slugs = artigos.map(artigo => ({
-    // Retorna um objeto com a chave 'slug' para cada artigo
     slug: slugify(artigo.titulo, { lower: true, strict: true })
   }));
   return slugs;
 }
 
 // Função para gerar metadados dinâmicos para SEO.
-// Também é executada no momento do build.
+// É executada no build para gerar as tags <title> e <meta> de cada página.
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   // Encontra o artigo correspondente ao 'slug' da URL
   const artigo = artigos.find(a => slugify(a.titulo, { lower: true, strict: true }) === params.slug);
 
-  // Se não encontrar, retorna metadados de 'não encontrado'
+  // Se o artigo não for encontrado, retorna metadados de 'não encontrado'
   if (!artigo) {
     return {
       title: 'Artigo não encontrado',
